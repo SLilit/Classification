@@ -13,4 +13,12 @@ X_test = np.array(data1.iloc[:, :])
 #print('test: ', y_train[:4])
 #print('test: ', X_test[:4])
 
-d
+def pluginClassifier(X_train, y_train, X_test):
+    
+  # this function returns the required output
+    outputs = np.zeros(shape = (len(X_test),4))
+    means = np.zeros(shape=(4,len(X_train[0])))
+    covariences = np.array([[[0.]*5]*5]*4) 
+    prior = np.zeros(shape = (4,1))
+    count = np.zeros(shape = (5,1))
+    cov_det = np.zeros(shape = (4,1))
